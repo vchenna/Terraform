@@ -71,6 +71,19 @@ terraform destroy
 
 After a successful apply the module outputs include things like EC2 instance IDs and RDS endpoint (check `modules/*/outputs.tf`).
 
+### Deployment Outputs
+
+The following outputs were produced by the last deployment:
+
+```
+app_instance_id   = "i-030dbe6ab34b02da8"
+private_subnet_id = "subnet-04269e5a1fcefc167"
+public_subnet_id  = "subnet-002067b4583e2edf2"
+rds_endpoint      = "terraform-20260129212637663900000003.ckf6wqg46lcs.us-east-1.rds.amazonaws.com:3306"
+vpc_id            = "vpc-031e4f12e2261a695"
+web_instance_id   = "i-0b25e9b45647aed57"
+```
+
 ## Next steps / enhancements
 
 - Replace hardcoded AMIs with a data lookup (e.g., `data "aws_ami"`) for reproducible builds.
